@@ -33,7 +33,7 @@ const double eps = 1e-9;
 
 struct node {
 	int v, p, sz;
-	bool lazy;
+	int lazy;
 	node * L, *R;
 
 	node() {
@@ -41,9 +41,15 @@ struct node {
 		L = NULL;
 		R = NULL;
 		sz = 1;
+		lazy = 0;
 	}
 
-	node(int v) : node() {
+	node(int v) {
+		p = rand() % int(1e9);
+		L = NULL;
+		R = NULL;
+		sz = 1;
+		lazy = 0;
 		this->v = v;
 	}
 };
