@@ -1,9 +1,8 @@
 
 // ~/BAU/ACM-ICPC/Teams/Rampage/Corvus
 // ~/sudo apt-get verdict Accpeted
-//Suffix Array O(N * log^2 N)
+//Suffix Array O(N * log^2 )
 //LCP O(N)
-
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,7 +40,7 @@ void build_suffix_array() {
 		suff[i] = i;
 		ord[i] = s[i];
 	}
-	for(int len=2; ; len *= 2) {
+	for(int len=1; ; len *= 2) {
 		sort(suff,suff+n,[&len](int a,int b) {
 			return ord[a] < ord[b] || (ord[a]==ord[b] && ord[a+len] < ord[b+len]);
 		});
