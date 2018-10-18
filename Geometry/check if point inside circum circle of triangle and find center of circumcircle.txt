@@ -1,0 +1,17 @@
+bool check(point p, point c, double r) {
+	return hypot(p.x - c.x, p.y - c.y) + EPS < r; //dist between p and c
+}
+
+bool in_circum_circle(triangle t, point p) {
+	double m1 = (P[t.a].x - P[t.b].x) / (P[t.b].y - P[t.a].y);
+	double m2 = (P[t.a].x - P[t.c].x) / (P[t.c].y - P[t.a].y);
+
+	double b1 = (P[t.a].y + P[t.b].y) / 2 - m1*(P[t.a].x + P[t.b].x) / 2;
+	double b2 = (P[t.a].y + P[t.c].y) / 2 - m2*(P[t.a].x + P[t.c].x) / 2;
+	double xx = (b2 - b1) / (m1 - m2);
+
+	point c(xx, m1*xx + b1);
+	double r = hypot(c.x - P[t.a].x, c.y - P[t.a].y);
+
+	return check(p, c, r);
+}
