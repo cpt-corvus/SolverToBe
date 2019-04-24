@@ -43,7 +43,7 @@ vector<ll> p1, p2;
  
  /**
  * Fast Fourier Transform (FFT)
- * Transform the polynomials passed by refrence v to point-form by using FFT algorithm to perfom Discreate Fourier Transform (DFT)
+ * Transform the polynomials passed by refrence v to point-value form by using FFT algorithm to perfom Discreate Fourier Transform (DFT)
  */
 void fft(vector<complex<double> > & v, bool inverse) {
 	int n = v.size();
