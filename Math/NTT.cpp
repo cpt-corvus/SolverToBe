@@ -58,7 +58,7 @@ int fast_pow(int b, int n) {
  /**
  * Fast Fourier Transform (FFT)
  * Number Theoretic Transform (NTT)
- * Transform the polynomials passed by refrence v to point-value form by using FFT algorithm to perfom Discreate Fourier Transform (DFT)
+ * Transform the polynomials passed by refrence p to point-value form by using FFT algorithm to perfom Discreate Fourier Transform (DFT)
  * Implementation of FFT to calculate multiplication of two polynomials module prime number
  * It slower than the complex numbers based implementation of FFT but it has some advantages (1) lower memory usage, (2) no rounding errors
  */
