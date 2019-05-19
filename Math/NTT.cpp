@@ -90,7 +90,6 @@ void fft(vector<int> & p, bool inverse) {
 			w = (1ll * w * wlen) % mod;
 		}
 	}
-	//for (int i = 0; i < n; i++) if (p[i] < 0) p[i] += mod;
 	if (inverse) {
 		int n_inverse = fast_pow(n, mod - 2);
 		for (int i = 0; i < p.size(); i++)
